@@ -1,0 +1,149 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.blue h2, .blue div{
+    color: white;
+}
+
+.blue{
+    background-color: #00485E;
+}
+
+.blue-darker{
+    background-color: #022630;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.background-title{
+    /*visibility: hidden;*/
+    height: 4em;
+    width: 100%;
+    position: absolute;
+
+}
+
+section.blue .background-title{
+    background-color: #022630;
+    
+}
+
+section:not(.blue) .background-title{
+    background-color: #d6d6d6;
+}
+.images>div{
+    text-align: center;
+    padding: 2em;
+}
+
+.images img{
+    border-radius: 50%;
+    text-align: center;
+}
+img+p{
+    padding: 1em 1em;
+}
+
+.images+.images{
+    margin-top: 2em;
+}
+
+#services>.row{
+    margin-bottom: 2em;
+}
+
+.gray{
+    background-color: gray;
+}
+
+section>div+div>img:first-child{
+    padding: 1em 0.5em;
+}
+
+footer>div:first-child{
+    padding: 1em;
+}
+
+footer>div:last-child{
+    background-color: #021619;
+    color: white;
+}
+footer img{
+    height: 3em;
+    width: auto;
+}
+
+
+.fab{
+    background-color: #021619;
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.5em;
+    padding: 0.9em;
+    border-radius: 50%;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.fab>img{
+    width: 2em;
+}
+
+.fab svg{
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 2em;
+}
+
+
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    .text{
+        text-align: center;
+    }
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    section:first-child{
+        padding: 0;
+    }
+
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+    section{
+        padding: 6em 10em;
+    }
+
+    section>.column:first-child{
+        margin-bottom: 3em;
+    }
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

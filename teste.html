@@ -1,0 +1,147 @@
+<style>
+    body {
+  background: #1d1f20;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 100vh;
+  white-space: nowrap;
+}
+
+.parallax-layer.one {
+  color: #ccc;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.parallax-layer.two {
+  color: #bbb;
+  -webkit-transform: translateZ(-.25px);
+  transform: translateZ(-.25px);
+}
+
+.parallax-layer.three {
+  color: #aaa;
+  -webkit-transform: translateZ(-.5px);
+  transform: translateZ(-.5px);
+}
+
+.parallax-layer.four {
+  color: #999;
+  -webkit-transform: translateZ(-.75px);
+  transform: translateZ(-.75px);
+}
+
+.parallax-layer.five {
+  color: #888;
+  -webkit-transform: translateZ(-1px);
+  transform: translateZ(-1px);
+}
+
+.parallax-layer.six {
+  color: #777;
+  -webkit-transform: translateZ(-1.25px);
+  transform: translateZ(-1.25px);
+}
+
+.parallax-layer.seven {
+  color: #666;
+  -webkit-transform: translateZ(-1.5px);
+  transform: translateZ(-1.5px);
+}
+
+.parallax-layer.eight {
+  color: #555;
+  -webkit-transform: translateZ(-1.75px);
+  transform: translateZ(-1.75px);
+}
+
+.parallax-layer.nine {
+  color: #444;
+  -webkit-transform: translateZ(-2px);
+  transform: translateZ(-2px);
+}
+
+.parallax-layer.ten {
+  color: #333;
+  -webkit-transform: translateZ(-2.25px);
+  transform: translateZ(-2.25px);
+}
+</style>
+
+
+<div class="parallax">
+  <div class="parallax-layer one">
+    <img src="teste.png" alt="">
+  </div><div class="parallax-layer two">
+    <img src="teste.png" alt="">
+  </div><div class="parallax-layer three">
+    <img src="teste.png" alt="">
+  </div><div class="parallax-layer four">
+    <img src="teste.png" alt="">
+  </div><div class="parallax-layer five">
+    <img src="teste.png" alt="">
+  </div><div class="parallax-layer six">
+    <img src="teste.png" alt="">
+  </div><div class="parallax-layer seven">
+    <img src="teste.png" alt="">
+  </div><div class="parallax-layer eight">
+    <img src="teste.png" alt="">
+  </div><div class="parallax-layer nine">
+    <img src="teste.png" alt="">
+  </div><div class="parallax-layer ten">
+    <img src="teste.png" alt="">
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    (function() {
+
+  var parallaxObj, scrollToThis, interval;
+
+  parallaxObj = $('.parallax');
+  scrollToThis = parallaxObj.height();
+
+  function scroll() {
+
+    parallaxObj.animate({
+      scrollTop: scrollToThis
+    }, 2000);
+    
+    if(scrollToThis === 0){
+      scrollToThis = parallaxObj.height();
+    }else{
+      scrollToThis = 0;
+    }
+  }
+  
+  scroll();
+
+  interval = setInterval(function() {
+    scroll();
+  }, 2000);
+  
+  $('body').on('mouseover', function(){
+    clearInterval(interval);
+  });
+
+}());
+</script>
