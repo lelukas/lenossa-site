@@ -6,11 +6,11 @@ window.onload = function(){
 
     $(window).resize(function (){
       setBackgrounds();
-      $(".tes").position({
-        my: "right bottom",
-        at: "right bottom",
-        of: "#section-1"
-      })
+      // $(".tes").position({
+      //   my: "bottom",
+      //   at: "right bottom",
+      //   of: "#section-1"
+      // })
     })
 
 
@@ -80,11 +80,11 @@ window.onload = function(){
       })
     }
 
-    $(".tes").position({
-      my: "right bottom",
-      at: "right bottom",
-      of: "#section-1"
-    })
+    // $(".tes").position({
+    //   my: "center bottom",
+    //   at: "center bottom",
+    //   of: "#section-1"
+    // })
 }
 
 
