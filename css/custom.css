@@ -1,6 +1,14 @@
-body{
+html, body{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+}
+
+section:nth-child(2){
+    position: relative;
+}
+
+#section-1{
+
 }
 
 .blue h2, .blue div{
@@ -43,6 +51,10 @@ h2{
 
 }
 
+#section-2>div:last-child>p{
+    font-style: italic;
+}
+
 section.blue .background-title{
     background-color: #022630;
     
@@ -76,8 +88,10 @@ img+p{
     background-color: gray;
 }
 
-section>div+div>img:first-child{
-    padding: 1em 0.5em;
+#section-1 img{
+    width: auto;
+    height: 20em;
+    position: absolute;
 }
 
 footer>div:first-child{
@@ -93,8 +107,12 @@ footer img{
     width: auto;
 }
 
-
+#lenossa{
+    bottom: 7em;
+}
 .fab{
+    cursor: pointer;
+    z-index: 100;
     background-color: #021619;
     position: fixed;
     bottom: 1.5em;
@@ -114,28 +132,44 @@ footer img{
     width: 2em;
 }
 
-
+.submenu{
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.5em;
+}
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-    .text{
+    #section-1>div+div{
         text-align: center;
     }
+
+    section{
+        padding: 5em 0em;
+    }
+
+    section>.column:first-child{
+        margin-bottom: 3em;
+    }
+    
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
 }
 
 /* Medium and up */
 @media screen and (min-width: 40em) {
-    section:first-child{
+    /*section:first-child{
         padding: 0;
+    }*/
+
+    #section-1>div+div{
+        text-align: right;
     }
 
-}
 
-/* Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
-
-/* Large and up */
-@media screen and (min-width: 64em) {
     section{
         padding: 6em 10em;
     }
@@ -143,6 +177,14 @@ footer img{
     section>.column:first-child{
         margin-bottom: 3em;
     }
+
+}
+
+
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+    
 }
 
 /* Large only */
