@@ -7,9 +7,11 @@
     <title>Lenossa</title>
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="bower_components\swiper\dist\css\swiper.min.css">
 
     <!--Custom CSS-->
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/slider.css">
 
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
@@ -23,39 +25,71 @@
   </head>
   <body>
 
-      <div class="top-bar">
+      <div class="top-bar show-for-medium">
+        <div class="top-bar-title">
+          <img src="etc/lenossa.png" alt="">
+        </div>
         <div class="top-bar-left">
-          <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Site Title</li>
-            <li>
-              <a href="#">One</a>
-              <ul class="menu vertical">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Two</a></li>
-            <li><a href="#">Three</a></li>
-          </ul>
         </div>
         <div class="top-bar-right">
           <ul class="menu">
-            <li><input type="search" placeholder="Search"></li>
-            <li><button type="button" class="button">Search</button></li>
+             <li><a href="">teste</a></li>
           </ul>
         </div>
     </div>
+
+    <div class="top-bar show-for-small-only">
+        <div class="top-bar-title">
+          <img src="etc/lenossa.png" alt="">
+        </div>
+        <div class="top-bar-left">
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+             <li><a href="">jahsdgjhasdgjhas</a></li>
+          </ul>
+        </div>
+    </div>
+
+
+
+<div class="swiper-container">  
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="img show-for-small-only" id="img-1"></div>
+          <img src="etc/1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <div class="img show-for-small-only" id="img-2"></div>
+          <img src="etc/2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <div class="img show-for-small-only" id="img-3"></div>
+          <img src="etc/3.jpg" alt="">
+        </div>
+    </div>
+  
+    <div class="swiper-pagination"></div>
+    
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+
+
+
+
+
 
       <section class="row align-center expanded blue" id="section-1">
         <div class="column small-12">
           <h2 class="title" id="title-1">Inovação, compromisso e esforço</h2>
         </div>
         <div class="background-title" id="background-1"></div>
-        <div class="column small-12 medium-5 medium-text-right align-self-middle">
+        <div class="column small-12 medium-12 large-6 medium-text-right align-self-middle">
           Fundada no ano de 2016, a Lenossa atua na prestação de serviços digitais visando o crescimento pessoal, empresarial e empreendedor do cliente que busca a possibilidade de negócio rentável. Disposta a orientar nessa esfera virtual, com profissionais capacitados e empenhados em oferecer soluções às diversas formas de atividades, a Lenossa une criatividade, competência, dinamicidade, elegância, funcionalidade, segurança e compromisso para satisfazer seus clientes.
         </div>
-        <div class="column small-12 medium-5 align-self-middle">
+        <div class="column small-12 medium-12 large-6 align-self-middle">
           <img src="etc/lenossa-card.svg" alt="" class="tes">
         </div>
       </section>
@@ -166,45 +200,6 @@
           <h2 class="title" id="title-5">Parceiros</h2>
         </div>
         <div class="background-title" id="background-5"></div>
-        <!--<div class="column small-12 medium-6 text-center">-->
-          <!--<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
-        <ul class="orbit-container">
-
-          <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-          <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-
-          <li class="is-active orbit-slide">
-            <img class="orbit-image" src="http://placehold.it/200x200" alt="Space">
-            <img class="orbit-image" src="http://placehold.it/200x200" alt="Space">
-            <img class="orbit-image" src="http://placehold.it/200x200" alt="Space">
-            <figcaption class="orbit-caption">Space, the final frontier.</figcaption>
-          </li>
-
-          <li class="orbit-slide">
-            <img class="orbit-image" src="http://placehold.it/200x200" alt="Space">
-            <figcaption class="orbit-caption">Lets Rocket!</figcaption>
-          </li>
-
-          <li class="orbit-slide">
-            <img class="orbit-image" src="http://placehold.it/200x200" alt="Space">
-            <figcaption class="orbit-caption">Encapsulating</figcaption>
-          </li>
-
-          <li class="orbit-slide">
-            <img class="orbit-image" src="http://placehold.it/200x200" alt="Space">
-            <figcaption class="orbit-caption">Outta This World</figcaption>
-          </li>
-
-        </ul>
-        <nav class="orbit-bullets">
-          <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
-          <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-          <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-          <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
-        </nav>
-      </div>-->
-        <!--</div>-->
-        
       </section>
       
 
@@ -246,18 +241,6 @@
       </footer>
 
 
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li>
-            <a href="">
-              <div class="fab" id="lenossa">
-                <img src="etc/lenossa.svg" alt="">
-              </div>
-            </a>
-            <ul class="menu">
-                <li><a href="">Teste</a></li>
-            </ul>
-          </li>
-        </ul>
         
 
         <div class="fab" id="backToTop">
@@ -272,6 +255,8 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/what-input/dist/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="bower_components\swiper\dist\js\swiper.min.js"></script>
+    <script src="bower_components\swiper\dist\js\swiper.jquery.min.js"></script>
 
 
     <script src="js/lib/greensock/TweenMax.min.js"></script>

@@ -5,13 +5,25 @@ window.onload = function(){
     var screenWidth = $(window).width();
 
     $(window).resize(function (){
-      setBackgrounds();
+
+ 
+      // setTimeout(function() {
+              setBackgrounds();
+      // }, 400);
+
+
       // $(".tes").position({
       //   my: "bottom",
       //   at: "right bottom",
       //   of: "#section-1"
       // })
     })
+
+    var controllerButton = new ScrollMagic.Controller();
+    var tweenButton1 = TweenLite.from(".fab", 0.3, {opacity: 0, x: "+=100"});
+    var sceneButton = new ScrollMagic.Scene({
+      triggerElement: "#section-2"
+    }).setTween(tweenButton1).addTo(controllerButton);
 
 
     function ScrollFactory(background, section){
@@ -26,7 +38,7 @@ window.onload = function(){
       .addTo(this.controller);
     };
 
-    //The first For can't be used once not all .background-title are properly positioned
+    //GAMBIARRA. ARRUMAR DEPOIS
     for(i = 1; i < 7; i++){
       anim = new ScrollFactory("#background-"+i, "#section-"+i)
     }
@@ -80,22 +92,29 @@ window.onload = function(){
       })
     }
 
-    // $(".tes").position({
-    //   my: "center bottom",
-    //   at: "center bottom",
-    //   of: "#section-1"
-    // })
+
+    //initialize swiper when document ready  
+    var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    
+    // If we need pagination
+    pagination: '.swiper-pagination',
+    
+    // Navigation arrows
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+
+    // onImagesReady: function(){
+    //   setBackgrounds();
+    // }
+  })
+
+  mySwiper.once('SetTranslate', function(){
+    // setBackgrounds();
+    // alert(1)
+  });       
+ 
 }
-
-
-// "footer>div:first-child>img
-
-
-
-// var offset = parseFloat($(".background-title").css("left"));
-// console.log(parseFloat(offset))
-// var test = offset-screenWidth;
-// console.log(test)
-
-
 
