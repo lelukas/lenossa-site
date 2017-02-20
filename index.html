@@ -20,7 +20,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo:600" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 
   </head>
   <body>
@@ -32,9 +32,7 @@
         <div class="top-bar-left">
         </div>
         <div class="top-bar-right">
-          <ul class="menu">
-             <li><a href="">teste</a></li>
-          </ul>
+          
         </div>
     </div>
 
@@ -202,34 +200,79 @@
         <div class="background-title" id="background-5"></div>
       </section>
       
-
-      <section class="row expanded" id="section-6">
+      <!--<div class="parallaxParent" id="parallax1">
+        <div style="background-image: url(etc/maps.png);"></div>
+      </div>-->
+      
+      <section class="row expanded " id="section-6">
+        
 
         <div class="column small-12">
           <h2 class="title" id="title-6">Onde nos encontrar</h2>
         </div>
         <div class="background-title" id="background-6"></div>
 
-        <div class="column small-12 medium-6 text-center shrink gray">
-          <img src="http://placehold.it/200x400" alt="">
-        </div>
+        <form action="">
+          <div class="row">
 
-        <div class="column">
-          <div class="row gray">
-            <img src="etc/map-marker.svg" alt="" class="column small-6 shrink">
-            <div class="column small-11">Rua Teopisto Abath, 398. Bairro Pinto Madeira</div>
+            <div class="column medium-6">
+              <label for="">Nome
+                <input type="text" />
+              </label>
+            </div>
 
-            <img src="etc/city.svg" alt="" class="column small-6 shrink">
-            <div class="column small-11">Crato</div>
-
-            <img src="etc/cellphone-android.svg" alt="" class="column small-6 shrink">
-            <div class="column small-11">(88) 99729-5604</div>
-
-            <img src="etc/at.svg" alt="" class="column small-6 shrink">
-            <div class="column small-11">contato@lenossa.com</div>
+            <div class="column medium-6">
+              <label for="">Email
+                <input type="text"/>
+              </label>
+            </div>
           </div>
+          
+          <div class="row">
+            <div class="column medium-12">
+              <label for="">Assunto
+                <input type="text"/>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Mensagem
+                  <textarea></textarea>
+                </label>
+              </div>
+            </div>
+
+        </form>
+
+        <!--<div class="column small-12 medium-6 text-center shrink gray">
+          <img src="http://placehold.it/200x400" alt="">
+        </div>-->
+
+        <div class="column align-self-middle">
+
+          <div class="row">
+            <img class="column shrink" src="etc/map-marker.svg" alt="">
+            <div class="column">Rua Teopisto Abath, 398. Bairro Pinto Madeira</div>
+          </div>
+
+          <div class="row">
+            <img class="column shrink" src="etc/city.svg" alt="" >
+            <div class="column">Crato</div>
+          </div>
+            
+          <div class="row">
+            <img class="column shrink" src="etc/cellphone-android.svg" alt="" >
+            <div class="column">(88) 99729-5604</div>
+          </div>
+            
+          <div class="row">
+            <img class="column shrink" src="etc/at.svg" alt="" >
+            <div class="column">contato@lenossa.com</div>
+          </div>
+            
         </div>     
-        
       </section>
     
 
@@ -241,15 +284,30 @@
       </footer>
 
 
-        
-
-        <div class="fab" id="backToTop">
-          <img src="etc/chevron-up.svg" alt="">
+        <div class="fab-menu">
+          <ul data-magellan>
+            <li><a id="backToTop">Voltar ao Topo</a></li>
+            <li><a>Plataforma Lenossa</a></li>
+            <div class="divider"></div>
+            <li><a href="#section-1">Inovação, Compromisso e Esforço</a></li>
+            <li><a href="#section-2">Seja Ambicioso</a></li>
+            <li><a href="#section-3">Equipe</a></li>
+            <li><a href="#section-4">Serviços</a></li>
+            <li><a href="#section-5">Parceiros</a></li>
+            <li><a href="#section-6">Onde nos encontrar</a></li>    
+          </ul>
+          <!--<svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0 0 C 50 100 80 100 100 0 Z"/>
+          </svg>-->
         </div>
 
-      <!--<div class="background-title"></div>-->
-
-      <!--todo: parceiros(clientes), footer-->
+        <!--<div class="fab" id="backToTop">
+          <img src="etc/chevron-up.svg" alt="">
+        </div>-->
+        <div class="menu-overlay" style="visibility: hidden;"></div>
+        <div class="fab" id="menu">
+          <img src="etc/menu.svg" alt="">
+        </div>
 
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
