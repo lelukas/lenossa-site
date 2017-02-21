@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133.15 132.7">
+    <title>icon-1</title>
+    <g id="Camada_2" data-name="Camada 2">
+        <g id="icone-1">
+            <g id="fundo_circular" data-name="fundo circular">
+                <circle cx="48.75" cy="48.75" r="44.75" style="fill:#00485e;stroke:#fff;stroke-miterlimit:10;stroke-width:8px" />
+                <g id="carrinho">
+                    <circle cx="59.99" cy="66.22" r="2.08" style="fill:#b63c31" />
+                    <circle cx="36" cy="66.22" r="2.08" style="fill:#b63c31" />
+                    <path d="M27.75,34.78l4.1,23.5H62.31l6-23.5Zm17,18.42L60.38,44l.3.51L45.1,53.71ZM39,49.37,50.66,42l.32.5L39.31,49.88Z" style="fill:#ffd415" />
+                    <path d="M32.07,60.53h30.7l7.71-30.79a.65.65,0,0,1,.21-.32l0,0,.09-.06a.61.61,0,0,1,.32-.1h6.71a.63.63,0,0,1,.63.63v.08a.63.63,0,0,1-.63.63h-6.2L63.95,61.36l0,0a.64.64,0,0,1-.05.11.65.65,0,0,1-.08.11l-.09.08-.11.08-.11,0-.14,0H32.07a.67.67,0,0,1,0-1.34Z" style="fill:#0ca0e2" />
+                </g>
+            </g>
+        </g>
+        <g id="icone-2">
+            <g id="fundo_circular-2" data-name="fundo circular">
+                <circle cx="84.4" cy="83.95" r="44.75" style="fill:#00485e;stroke:#fff;stroke-miterlimit:10;stroke-width:8px" />
+                <g id="pagina">
+                    <rect x="56.41" y="64.35" width="55.99" height="39.2" rx="0.86" ry="0.86" style="fill:#f7cd5d" />
+                    <path d="M112.1,64.35H56.7a.3.3,0,0,0-.3.3V69h56V64.64A.3.3,0,0,0,112.1,64.35Z" style="fill:#262626" />
+                    <rect x="66.09" y="74.63" width="10.58" height="8.68" style="fill:#262626" />
+                    <rect x="78.97" y="85.04" width="23.05" height="8.22" style="fill:#262626" />
+                    <rect x="78.83" y="74.71" width="23.19" height="0.76" style="fill:#1d8972" />
+                    <rect x="78.83" y="76.29" width="23.19" height="0.76" style="fill:#1d8972" />
+                    <rect x="78.83" y="77.86" width="23.19" height="0.76" style="fill:#1d8972" />
+                    <rect x="78.83" y="79.44" width="23.19" height="0.76" style="fill:#1d8972" />
+                    <rect x="78.83" y="81.02" width="23.19" height="0.76" style="fill:#1d8972" />
+                    <rect x="78.83" y="82.59" width="23.19" height="0.76" style="fill:#1d8972" />
+                    <rect x="66.2" y="87.18" width="10.24" height="0.76" style="fill:#1d8972" />
+                    <rect x="66.2" y="88.76" width="10.24" height="0.76" style="fill:#1d8972" />
+                    <rect x="66.2" y="90.33" width="10.24" height="0.76" style="fill:#1d8972" />
+                    <rect x="65.43" y="65.56" width="44.58" height="2.27" rx="1" ry="1" style="fill:#fff" />
+                    <circle cx="58.58" cy="66.69" r="0.6" style="fill:#bb3f34" />
+                    <circle cx="60.39" cy="66.69" r="0.6" style="fill:#ffc800" />
+                    <circle cx="62.21" cy="66.69" r="0.6" style="fill:#59cb9a" />
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133.15 132.7">
+    <title>icon-2</title>
+    <g id="Camada_2" data-name="Camada 2">
+        <g id="icone-1">
+            <circle cx="48.75" cy="48.75" r="44.75" style="fill:#00485e;stroke:#fff;stroke-miterlimit:10;stroke-width:8px" />
+            <g id="monitor">
+                <rect x="23.57" y="30.16" width="50.36" height="33.04" rx="0.99" ry="0.99" style="fill:#303030" />
+                <rect x="25.05" y="31.99" width="47.36" height="24.89" style="fill:#42b4e6" />
+                <path d="M48.75,68.95h6.76c2,0,2.43-.49,1.87-.7-3.09-.95-2.82-1.06-3.28-5H43.4c-.46,4-.19,4.09-3.28,5-.56.21-.11.7,1.87.7Z" style="fill:#d1d1d1" />
+                <path d="M73.93,62.22V58.75H23.57v3.46a1,1,0,0,0,1,1H72.94A1,1,0,0,0,73.93,62.22Z" style="fill:#e2e2e2" />
+            </g>
+            <g id="window">
+                <rect x="32.53" y="33.08" width="32.44" height="22.71" rx="0.5" ry="0.5" style="fill:#d3d3d3" />
+                <path d="M64.8,33.08H32.71a.17.17,0,0,0-.17.17v2.54H65V33.25A.17.17,0,0,0,64.8,33.08Z" style="fill:#262626" />
+                <rect x="37.76" y="33.78" width="25.83" height="1.31" rx="0.58" ry="0.58" style="fill:#fff" />
+                <circle cx="33.8" cy="34.44" r="0.35" style="fill:#bb3f34" />
+                <circle cx="34.84" cy="34.44" r="0.35" style="fill:#ffc800" />
+                <circle cx="35.89" cy="34.44" r="0.35" style="fill:#59cb9a" />
+                <path d="M32.53,54.09v1.26a.44.44,0,0,0,.44.44H64.53a.44.44,0,0,0,.44-.44V54.09Z" style="fill:#383837" />
+                <rect x="33.52" y="54.66" width="1.91" height="0.56" rx="0.06" ry="0.06" style="fill:#9b9a9a" />
+                <rect x="33.75" y="54.85" width="1.46" height="0.16" style="fill:#fff" />
+                <rect x="36.81" y="54.66" width="1.91" height="0.56" rx="0.06" ry="0.06" style="fill:#9b9a9a" />
+                <rect x="37.03" y="54.85" width="1.46" height="0.16" style="fill:#fff" />
+                <rect x="33.86" y="38.19" width="29.79" height="12.86" rx="0.89" ry="0.89" style="fill:none;stroke:#a3a39d;stroke-miterlimit:10;stroke-width:0.10000000149011612px" />
+                <rect x="35.89" y="39.81" width="10.76" height="0.67" style="fill:#fff" />
+                <rect x="35.89" y="41.52" width="10.76" height="0.67" style="fill:#fff" />
+                <rect x="35.89" y="43.24" width="10.76" height="0.67" style="fill:#fff" />
+                <rect x="35.89" y="44.96" width="10.76" height="0.67" style="fill:#fff" />
+                <rect x="49.83" y="39.81" width="4.17" height="4.11" rx="0.43" ry="0.43" style="fill:#494848" />
+                <rect x="49.83" y="45.3" width="4.17" height="4.11" rx="0.43" ry="0.43" style="fill:#494848" />
+                <rect x="55.36" y="39.81" width="4.17" height="4.11" rx="0.43" ry="0.43" style="fill:#494848" />
+                <rect x="55.36" y="45.3" width="4.17" height="4.11" rx="0.43" ry="0.43" style="fill:#494848" />
+                <rect x="35.89" y="47.13" width="10.76" height="2.28" style="fill:#adadad" />
+            </g>
+        </g>
+        <g id="icone-2">
+            <circle cx="84.4" cy="83.95" r="44.75" style="fill:#00485e;stroke:#fff;stroke-miterlimit:10;stroke-width:8px" />
+            <g id="smartphone">
+                <path d="M98.88,109.71a1.64,1.64,0,0,1-1.65,1.62H71.57a1.64,1.64,0,0,1-1.65-1.62V58.18a1.64,1.64,0,0,1,1.65-1.62H97.23a1.64,1.64,0,0,1,1.65,1.62v51.53" style="fill:#142630;fill-rule:evenodd" />
+                <polygon points="96.24 62.61 95.55 62.61 94.22 62.61 92.71 62.61 91.45 62.61 91.37 62.61 89.68 62.61 85.44 62.61 83.97 62.61 82.46 62.61 81.05 62.61 78.93 62.61 77.62 62.61 73.47 62.61 73.32 62.61 72.01 62.61 71.25 62.61 71.25 68.45 71.25 68.45 71.25 70.02 71.25 70.03 71.25 74.36 71.25 74.36 71.25 79.62 71.25 79.62 71.25 80.92 71.25 80.92 71.25 93.96 71.25 93.96 71.25 95.14 71.25 95.14 71.25 101.17 71.25 101.17 71.25 102.75 71.25 102.75 71.25 106.67 71.34 106.67 72.7 106.67 75.71 106.67 77.43 106.67 77.43 106.67 77.62 106.67 78.73 106.67 78.93 106.67 80.23 106.67 80.43 106.67 81.57 106.67 85.58 106.67 85.65 106.67 87.08 106.67 90.64 106.67 92.1 106.67 92.42 106.67 94.17 106.67 97.55 106.67 97.55 103.07 97.55 100.66 97.55 100.09 97.55 99.36 97.55 97.95 97.55 97.33 97.55 95.73 97.55 80.92 97.55 79.62 97.55 76.19 97.55 74.36 97.55 66.59 97.55 65.14 97.55 62.61 96.24 62.61 96.24 62.61" style="fill:#e6e5e5;fill-rule:evenodd" />
+                <polygon points="71.25 61.96 71.25 61.98 71.25 61.98 71.25 62.26 71.25 62.59 71.25 62.59 71.25 62.67 71.25 62.67 71.25 63.48 71.25 63.48 71.25 63.56 71.25 63.56 71.25 63.94 71.25 63.94 71.25 64.04 71.25 64.04 71.25 64.31 71.25 64.35 97.55 64.35 97.55 61.96 71.25 61.96 71.25 61.96" style="fill:#f2f2f7;fill-rule:evenodd" />
+                <path d="M84.71,110.53a1.45,1.45,0,1,1,1.45-1.45,1.45,1.45,0,0,1-1.45,1.45" style="fill:#53616f" />
+                <polygon points="80.39 63.43 73 63.43 73 62.62 80.39 62.62 80.39 63.43 80.39 63.43" style="fill:#213949;fill-rule:evenodd" />
+                <polygon points="86.13 63.43 82.67 63.43 82.67 62.62 86.13 62.62 86.13 63.43 86.13 63.43" style="fill:#213949;fill-rule:evenodd" />
+                <rect x="80.73" y="67.27" width="11.1" height="0.58" style="fill:#fff" />
+                <rect x="80.73" y="69.28" width="13.97" height="0.58" style="fill:#fff" />
+                <rect x="80.73" y="70.69" width="12.6" height="0.58" style="fill:#fff" />
+                <circle cx="76.71" cy="68.66" r="2.61" style="fill:#a50841" />
+                <rect x="73.77" y="72.82" width="21.26" height="0.07" style="fill:#7c7e7f" />
+                <rect x="80.73" y="75.3" width="11.1" height="0.58" style="fill:#fff" />
+                <rect x="80.73" y="77.31" width="13.97" height="0.58" style="fill:#fff" />
+                <rect x="80.73" y="78.73" width="12.6" height="0.58" style="fill:#fff" />
+                <circle cx="76.71" cy="76.7" r="2.61" style="fill:#0a5ba3" />
+                <rect x="73.77" y="80.86" width="21.26" height="0.07" style="fill:#7c7e7f" />
+                <rect x="80.73" y="83.34" width="11.1" height="0.58" style="fill:#fff" />
+                <rect x="80.73" y="85.35" width="13.97" height="0.58" style="fill:#fff" />
+                <rect x="80.73" y="86.77" width="12.6" height="0.58" style="fill:#fff" />
+                <circle cx="76.71" cy="84.74" r="2.61" style="fill:#1a8b91" />
+                <rect x="73.77" y="88.89" width="21.26" height="0.07" style="fill:#7c7e7f" />
+                <rect x="80.73" y="91.37" width="11.1" height="0.58" style="fill:#fff" />
+                <rect x="80.73" y="93.38" width="13.97" height="0.58" style="fill:#fff" />
+                <rect x="80.73" y="94.8" width="12.6" height="0.58" style="fill:#fff" />
+                <circle cx="76.71" cy="92.77" r="2.61" style="fill:#f9a825" />
+                <rect x="73.77" y="96.93" width="21.26" height="0.07" style="fill:#7c7e7f" />
+                <rect x="80.73" y="99.41" width="11.1" height="0.58" style="fill:#fff" />
+                <rect x="80.73" y="101.42" width="13.97" height="0.58" style="fill:#fff" />
+                <rect x="80.73" y="102.84" width="12.6" height="0.58" style="fill:#fff" />
+                <circle cx="76.71" cy="100.81" r="2.61" style="fill:#e64a19" />
+            </g>
+        </g>
+    </g>
+</svg>

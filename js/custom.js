@@ -9,12 +9,6 @@ window.onload = function(){
       // setTimeout(function() {
               setBackgrounds();
       // }, 400);
-
-      // $(".tes").position({
-      //   my: "bottom",
-      //   at: "right bottom",
-      //   of: "#section-1"
-      // })
     })
 
     // Fab button scale animation
@@ -24,8 +18,6 @@ window.onload = function(){
       triggerElement: "#section-2"
     }).setTween(tweenButton1).addTo(controllerButton);
 
-
-    
 
     //GAMBIARRA. ARRUMAR DEPOIS
     for(i = 1; i < 7; i++){
@@ -124,8 +116,31 @@ window.onload = function(){
   });       
 
 
+  $('div.bgParallax').each(function(){
+	var $obj = $(this);
+ 
+	$(window).scroll(function() {
+		var yPos = -($(window).scrollTop() / $obj.data('speed')); 
+ 
+		var bgpos = '50% '+ yPos + 'px';
+ 
+		$obj.css('background-position', bgpos );
+ 
+	}); 
+});
 
 
+$("svg").on({
+  mouseenter: function(){
+    TweenLite.to( $(this).children("g").children("g:first-child"), 0.4, {x: "2px", y: "2px", scale: 0.8, ease: Power2.easeOut})
+    TweenLite.to( $(this).children("g").children("g:last-child"), 0.4, {x: "9px", y: "9px", scale: 0.9, ease: Power2.easeOut})
+  },
+  mouseleave: function(){
+    TweenLite.to( $(this).children("g").children("g:first-child"), 0.4, {x: "-=2px", y: "-=2px", scale: 1, ease: Power2.easeOut})
+    TweenLite.to( $(this).children("g").children("g:last-child"), 0.4, {x: "-=9px", y: "-=9px", scale: 1 , ease: Power2.easeOut})
+  }
+  
+})
 
   // var controller4 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 
