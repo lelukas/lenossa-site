@@ -19,18 +19,29 @@ window.onload = function(){
     }).setTween(tweenButton1).addTo(controllerButton);
 
 
-    //GAMBIARRA. ARRUMAR DEPOIS
-    for(i = 1; i < 7; i++){
-      anim = new ScrollFactory("#background-"+i, "#section-"+i)
-    }
+    // Background Slide effect
+    $(".background-title").each(function(){
+      new ScrollFactory(this, this.parentElement)
+      //Doesn't accept JQuery objects as triggerElement
+    })
 
-
-    // mouse interactions
+    // mouse hover interactions
     $(".images>div").on({
       mouseenter: function() {
         TweenLite.to(this, 0.2, {backgroundColor: "#022630"})
       }, mouseleave: function() {
         TweenLite.to(this, 0.2, {backgroundColor: "#00485E"})
+      }
+    })
+
+    $("svg").on({
+      mouseenter: function(){
+        TweenLite.to( $(this).children("g").children("g:first-child"), 0.4, {x: "2px", y: "2px", scale: 0.8, ease: Power2.easeOut})
+        TweenLite.to( $(this).children("g").children("g:last-child"), 0.4, {x: "9px", y: "9px", scale: 0.9, ease: Power2.easeOut})
+      },
+      mouseleave: function(){
+        TweenLite.to( $(this).children("g").children("g:first-child"), 0.4, {x: "-=2px", y: "-=2px", scale: 1, ease: Power2.easeOut})
+        TweenLite.to( $(this).children("g").children("g:last-child"), 0.4, {x: "-=9px", y: "-=9px", scale: 1 , ease: Power2.easeOut})
       }
     })
 
@@ -69,8 +80,12 @@ window.onload = function(){
           })
     })
 
-    $("#backToTop").click(function(){
-      TweenLite.to(window, 1, {scrollTo:0, ease: Power4.easeOut });
+    // Navigation
+
+    $(".menu-navigation").click(function(event){
+      var offset= $("#section-"+$(this).parent().attr("id")).offset().top;
+      TweenLite.to(window, 1, {scrollTo:{y: {offset}}, ease: Power4.easeOut });
+      
     })
 
 
@@ -86,7 +101,7 @@ window.onload = function(){
           })
       })
     }
-
+    
 
     function ScrollFactory(background, section){
       this.controller = new ScrollMagic.Controller();
@@ -108,12 +123,7 @@ window.onload = function(){
     pagination: '.swiper-pagination',
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
-  })
-
-  mySwiper.once('SetTranslate', function(){
-    // setBackgrounds();
-    // alert(1)
-  });       
+  })      
 
 
   $('div.bgParallax').each(function(){
@@ -130,17 +140,7 @@ window.onload = function(){
 });
 
 
-$("svg").on({
-  mouseenter: function(){
-    TweenLite.to( $(this).children("g").children("g:first-child"), 0.4, {x: "2px", y: "2px", scale: 0.8, ease: Power2.easeOut})
-    TweenLite.to( $(this).children("g").children("g:last-child"), 0.4, {x: "9px", y: "9px", scale: 0.9, ease: Power2.easeOut})
-  },
-  mouseleave: function(){
-    TweenLite.to( $(this).children("g").children("g:first-child"), 0.4, {x: "-=2px", y: "-=2px", scale: 1, ease: Power2.easeOut})
-    TweenLite.to( $(this).children("g").children("g:last-child"), 0.4, {x: "-=9px", y: "-=9px", scale: 1 , ease: Power2.easeOut})
-  }
-  
-})
+
 
   // var controller4 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 

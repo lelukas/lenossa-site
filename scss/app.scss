@@ -42,7 +42,10 @@
 // @include foundation-title-bar;
 // @include foundation-tooltip;
 @include foundation-top-bar;
+@include top-bar-container;
 @include foundation-visibility-classes;
+@include hide-for(large);
+@include show-for(large);
 // @include foundation-float-classes;
 @include foundation-flex-classes;
 
