@@ -21,8 +21,10 @@
     <link href="https://fonts.googleapis.com/css?family=Exo:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 
+    <style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+    
   </head>
-  <body>
+  <body id="top">
 
     <div class="top-bar show-for-large">
       <div class="top-bar-title">
@@ -46,11 +48,13 @@
           <div class="top-bar-title">
             <img src="etc/lenossa.png" alt="">
           </div>
-          <div class="top-bar-right">
-            <ul class="menu">
-              <li><a href="">Plataforma Lenossa</a></li>
-            </ul>
-          </div>
+          <!--<div class="row">-->
+            <div class="top-bar-right">
+              <ul class="menu">
+                <li><a href="">Plataforma Lenossa</a></li>
+              </ul>
+            </div>
+          <!--</div>-->
       </div>
 
       <div class="swiper-container">  
@@ -75,12 +79,12 @@
           <div class="swiper-button-next"></div>
       </div>
 
-      <section class="row align-center expanded" id="section-inovacao">
+      <section class="row align-center expanded" id="section-inovacao" data-magellan-target="section-inovacao">
         <div class="column small-12">
           <h2 class="title" id="title-1">Inovação, compromisso e esforço</h2>
         </div>
         <div class="background-title" id="background-1"></div>
-        <div class="column small-12 medium-12 large-6 medium-text-right align-self-middle">
+        <div class="column small-12 medium-12 large-6 medium-text-center large-text-right align-self-middle">
           Fundada no ano de 2016, a Lenossa atua na prestação de serviços digitais visando o crescimento pessoal, empresarial e empreendedor do cliente que busca a possibilidade de negócio rentável. Disposta a orientar nessa esfera virtual, com profissionais capacitados e empenhados em oferecer soluções às diversas formas de atividades, a Lenossa une criatividade, competência, dinamicidade, elegância, funcionalidade, segurança e compromisso para satisfazer seus clientes.
         </div>
         <div class="column small-12 medium-12 large-6 align-self-middle">
@@ -295,7 +299,7 @@
           <h2 class="title" id="title-6">Converse conosco</h2>
         </div>
         <div class="background-title" id="background-6"></div>
-
+        
         <form action="">
           <div class="row">
 
@@ -328,35 +332,39 @@
               </div>
             </div>
 
-        </form>
 
-        <!--<div class="column small-12 medium-6 text-center shrink gray">
-          <img src="http://placehold.it/200x400" alt="">
-        </div>-->
+            <div class="column large-12">
+
+              <div class="row">
+                <img class="column shrink" src="etc/icons/map-marker.svg" alt="">
+                <div class="column">Rua Teopisto Abath, 398. Bairro Pinto Madeira</div>
+              </div>
+
+              <div class="row">
+                <img class="column shrink" src="etc/icons/city.svg" alt="" >
+                <div class="column">Crato</div>
+              </div>
+                
+              <div class="row">
+                <img class="column shrink" src="etc/icons/cellphone-android.svg" alt="" >
+                <div class="column">(88) 99729-5604</div>
+              </div>
+                
+              <div class="row">
+                <img class="column shrink" src="etc/icons/at.svg" alt="" >
+                <div class="column">contato@lenossa.com</div>
+              </div>
+                
+            </div>
+        </form>
 
         <div class="column align-self-middle">
 
-          <div class="row">
-            <img class="column shrink" src="etc/icons/map-marker.svg" alt="">
-            <div class="column">Rua Teopisto Abath, 398. Bairro Pinto Madeira</div>
-          </div>
+          <!--<div style='overflow:hidden;height:553px;width:542px;'>-->
+            <div id='gmap_canvas' style='overflow: hidden;'></div>
+          <!--</div>-->
 
-          <div class="row">
-            <img class="column shrink" src="etc/icons/city.svg" alt="" >
-            <div class="column">Crato</div>
-          </div>
-            
-          <div class="row">
-            <img class="column shrink" src="etc/icons/cellphone-android.svg" alt="" >
-            <div class="column">(88) 99729-5604</div>
-          </div>
-            
-          <div class="row">
-            <img class="column shrink" src="etc/icons/at.svg" alt="" >
-            <div class="column">contato@lenossa.com</div>
-          </div>
-            
-        </div>     
+        </div>  
       </section>
 
       <section class="row align-center expanded" id="section-equipe">
@@ -381,21 +389,29 @@
         <div class="column small-12 medium-6 text-center">
           <img src="etc/lenossa.svg" alt="">
         </div>
-        <div class="column small-12 text-center">© Copyright 2017 - Lenossa</div>
+        <div class="column small-12 text-center">
+          <div>
+            © Copyright 2017 - Lenossa
+          </div> 
+        </div>
       </footer>
 
 
-        <div class="fab-menu" id="side-menu">
-          <ul>
-            <li><a id="backToTop">Voltar ao Topo</a></li>
+        <!--<div id="menu-puller">
+
+        </div>-->
+
+        <div class="fab-menu" id="side-menu" style="right: -300px;">
+          <ul data-magellan>
+            <li><a href="#top">Voltar ao Topo</a></li>
             <li><a>Plataforma Lenossa</a></li>
             <div class="divider"></div>
-            <li id="inovacao"><a class="menu-navigation ">Inovação</a></li>
-            <li id="equipe"><a href="#" class="menu-navigation ">Equipe</a></li>
-            <li id="servicos"><a href="#" class="menu-navigation ">Serviços</a></li>
-            <li id="parceiros"><a href="#" class="menu-navigation ">Parceiros</a></li>
-            <li id="converse"><a href="#" class="menu-navigation ">Converse Conosco</a></li>
-            <li id=""><a href="">Plataforma Lenossa</a></li>    
+            <li><a href="#section-inovacao" class="menu-navigation ">Inovação</a></li>
+            <li><a href="#section-equipe" class="menu-navigation ">Equipe</a></li>
+            <li><a href="#section-servicos" class="menu-navigation ">Serviços</a></li>
+            <li><a href="#section-parceiros" class="menu-navigation ">Parceiros</a></li>
+            <li><a href="#section-converse" class="menu-navigation ">Converse Conosco</a></li>
+            <li><a href="">Plataforma Lenossa</a></li>    
           </ul>
         </div>
 
@@ -413,6 +429,7 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/what-input/dist/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    
     <script src="bower_components\swiper\dist\js\swiper.min.js"></script>
     <script src="bower_components\swiper\dist\js\swiper.jquery.min.js"></script>
 
@@ -425,7 +442,25 @@
     <script src="scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <script src="scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
 
-    
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCYJQQ_YrS0uBHFWoRM4d1Scj9spMykciI'></script>
+    <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=9ceaa94e22e8f4b80dcae7f8831e5f9ba5658b42'></script>
+    <script type='text/javascript'>
+          function init_map(){
+            var myOptions = {
+              zoom:18,
+              center:new google.maps.LatLng(-7.234189599999999,-39.40768600000001),
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+            marker = new google.maps.Marker({
+              map: map,position: new google.maps.LatLng(-7.234189599999999,-39.40768600000001)
+            });
+            infowindow = new google.maps.InfoWindow({
+                content:'<strong style="color: #000000">Lenossa</strong>'
+              });
+            google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+
     <script src="js/app.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/custom.js"></script>
@@ -434,3 +469,5 @@
     <script src="js/hammer-time.min.js"></script>
   </body>
 </html>
+
+

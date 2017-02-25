@@ -46,6 +46,7 @@
 @include foundation-visibility-classes;
 @include hide-for(large);
 @include show-for(large);
+@include show-for(medium);
 // @include foundation-float-classes;
 @include foundation-flex-classes;
 

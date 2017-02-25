@@ -32,21 +32,16 @@ section:nth-child(odd) .background-title{
 }
 
 .gray{
-    background-color: gray;
+    background-color: #c4c4c4;
 }
 
 .blue-darker{
     background-color: #022630;
 }
-
-footer>div:last-child{
-    background-color: #021619;
-    color: white;
-}
 /*---------------------------------------------------------*/
 
 
-/*Nav Bar*/
+/*Top Bar*/
 
 @keyframes in{
 
@@ -84,7 +79,7 @@ div.top-bar.show-for-large:hover{
     animation: in 0.3s forwards;
 }
 
-div.top-bar.show-for-large a{
+div.top-bar a{
     font-size: 1em;
     color: #00232d;
     font-weight: 500;
@@ -100,8 +95,8 @@ div.top-bar.show-for-large>.top-bar-right *{
     background-color: transparent;
 }
 
-div.top-bar.hide-for-large{
-    /*background: rgba(255, 255, 255, 1);*/
+div.top-bar.hide-for-large .top-bar-right>.menu{
+    background-color: #ededed;
 }
 /*---------------------------------------------------------*/
 
@@ -224,8 +219,30 @@ form{
     padding: 2em;
 }
 
+form textarea{
+    resize: none;
+    height: 7em;
+}
 
-/*Fab buttons*/
+form label{
+    padding-bottom: 2em;
+}
+
+form>div.column:last-child{
+    padding: 1em;
+    background-color: #022630;
+    margin-left: 2em;
+}
+
+form>div.column:last-child> *{
+    padding-bottom: 0.6em;
+}
+
+.row>img+div{
+    padding: 0;
+}
+
+/*Fab buttons and side menu*/
 .fab{
     cursor: pointer;
     z-index: 100;
@@ -266,7 +283,7 @@ form{
     background: white;
     position: fixed;
     bottom: 0;
-    right: -300px;
+    
     /*padding-right: 1em;*/
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
@@ -312,10 +329,33 @@ form{
     text-align: right;
     list-style: none;
 }
+
+#menu-puller{
+    position: fixed;
+    height: 100%;
+    width: 1em;
+    background-color: red;
+    z-index: 100;
+    right: 0;
+    top: 0;
+}
 /*---------------------------------------------------------*/
 
 
+/*Footer*/
 
+footer>div:last-child{
+    background-color: #021619;
+    color: white;
+    display: table;
+    width: 100%;
+}
+
+footer>div:last-child>div{
+    display: table-cell;
+    vertical-align: middle;
+    height: 3em;
+}
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
@@ -343,6 +383,11 @@ form{
     .swiper-container{
         height: 400px;
     }
+
+    form+.column{
+        margin-top: 1em;
+        padding-left: 0;
+    }
     
 }
 
@@ -355,6 +400,11 @@ form{
     div.top-bar-title>img{
         width: auto;
         height: 2em;
+    }
+
+    form+.column{
+        margin-top: 1em;
+        padding-left: 0;
     }
 }
 

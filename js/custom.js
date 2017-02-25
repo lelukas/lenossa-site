@@ -1,10 +1,30 @@
 window.onload = function(){
+
+  // var elem = new Foundation.Magellan(element, options);
+
+  // media query change
+    if (matchMedia) {
+      var mq = window.matchMedia("(min-width: 64em)");
+      mq.addListener(WidthChange);
+      WidthChange(mq);
+    }
+    
+    function WidthChange(mq) {
+      if (!mq.matches) {
+        $(".images>div").unbind();
+      } else {
+        
+      }
+    }
+
+
     var screenWidth = $(window).width();
     setBackgrounds();  
-
+    setMapsDimensions();
     $(window).resize(function (){
  
       // setTimeout(function() {
+              setMapsDimensions();
               setBackgrounds();
       // }, 400);
     })
@@ -58,22 +78,6 @@ window.onload = function(){
       }
     })
 
-
-    // media query change
-    if (matchMedia) {
-      var mq = window.matchMedia("(min-width: 64em)");
-      mq.addListener(WidthChange);
-      WidthChange(mq);
-    }
-    
-    function WidthChange(mq) {
-      if (!mq.matches) {
-        $(".images>div").unbind();
-      } else {
-        
-      }
-    }
-
     // Side menu
     $('#menu').click(function(){
         TweenLite.to(".fab-menu", 0.3, {right: 0});
@@ -84,17 +88,29 @@ window.onload = function(){
           })    
     })
 
-    var sideMenu = document.getElementById("side-menu");
-    var manager = new Hammer.Manager(sideMenu);
 
-    var panner = new Hammer.Pan({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 0 });
-    manager.add(panner);
-    manager.on("panleft", function(e) {
-        elem.style.transform = "translateX(" + (e.distance * -1) + "px)";
-    });
-    manager.on("panright", function(e) {
-        elem.style.transform = "translateX(" + e.distance + "px)";
-    });
+    // SLIDING HTMLMenuElement. CONTNUAR DEPOIS. //TODO DEMAIS
+
+    // var sideMenu = $("#side-menu");
+    // var menuPuller = document.getElementById("menu-puller");
+
+    // var manager = new Hammer.Manager(menuPuller);
+    // var panner = new Hammer.Pan({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 0 });
+    
+    // manager.add(panner);
+    // manager.on("panleft", function(e) {
+    //   if( parseFloat(sideMenu.css("right")) >= 300 || parseFloat(sideMenu.css("right")) <= 0){
+    //     console.log(sideMenu.css("right"))
+    //     $("#side-menu").css("right", parseFloat($("#side-menu").css("right")) +4 + "px");
+    //   }else{
+        
+    //   }
+        
+    // });
+
+    // manager.on("panright", function(e) {
+    //     // sideMenu.style.right = e.distance + "px";
+    // });
 
 
     $(".menu-overlay, .fab-menu li>a").click(function(){
@@ -108,11 +124,11 @@ window.onload = function(){
 
     // Navigation
     //bugado, arrumar
-    $(".menu-navigation").click(function(event){
-      var offset= $("#section-"+$(this).parent().attr("id")).offset().top;
-      TweenLite.to(window, 1, {scrollTo:{y: {offset}}, ease: Power4.easeOut });
+    // $(".menu-navigation").click(function(event){
+    //   var offset= $("#section-"+$(this).parent().attr("id")).offset().top;
+    //   TweenLite.to(window, 1, {scrollTo:{y: {offset}}, ease: Power4.easeOut });
       
-    })
+    // })
 
 
     // Methods
@@ -141,6 +157,15 @@ window.onload = function(){
       .addTo(this.controller);
     };
 
+    function setMapsDimensions(screen){
+      // while(mq){
+        if(mq.matches){
+          $("#gmap_canvas").height($("form").outerHeight());
+        }else{
+          $("#gmap_canvas").height("200px").width($("form").outerWidth());
+        }
+      // }  
+    }
 
     //Slider  
     var mySwiper = new Swiper ('.swiper-container', {
@@ -151,16 +176,5 @@ window.onload = function(){
     prevButton: '.swiper-button-prev',
   })      
 
-
-
-
-  // var controller4 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
-
-	// // build scenes
-	// new ScrollMagic.Scene({triggerElement: "#parallax1"})
-	// 				.setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
-	// 				.addIndicators()
-	// 				.addTo(controller4);
- 
 }
 
