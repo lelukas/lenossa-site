@@ -1,8 +1,6 @@
 window.onload = function(){
     var screenWidth = $(window).width();
-    setBackgrounds();
-
-    
+    setBackgrounds();  
 
     $(window).resize(function (){
  
@@ -11,11 +9,26 @@ window.onload = function(){
       // }, 400);
     })
 
+    var tl = new TimelineLite();
+    var shrinkBar = TweenLite.to(".top-bar:first-child", 0.2, {height: "4em"})
+    var shrinkLogo = TweenLite.to(".top-bar:first-child>div>img", 0.2, {y: "-=10",scale: 0.9, opacity: 0})
+    tl.add(shrinkBar).add(shrinkLogo);
+
+    var topBarController = new ScrollMagic.Controller();
+
+    var sceneBar = new ScrollMagic.Scene({
+      triggerElement: "#section-inovacao"
+    }).setTween(tl).addTo(topBarController);
+
+    var sceneBar2 = new ScrollMagic.Scene({
+      triggerElement: "#section-inovacao"
+    }).setTween(shrinkLogo).addTo(topBarController);
+
     // Fab button scale animation
     var controllerButton = new ScrollMagic.Controller();
     var tweenButton1 = TweenLite.from(".fab", 0.3, {scale: 0, ease: Power4.easeOut});
     var sceneButton = new ScrollMagic.Scene({
-      triggerElement: "#section-2"
+      triggerElement: "#section-inovacao"
     }).setTween(tweenButton1).addTo(controllerButton);
 
 
@@ -71,6 +84,19 @@ window.onload = function(){
           })    
     })
 
+    var sideMenu = document.getElementById("side-menu");
+    var manager = new Hammer.Manager(sideMenu);
+
+    var panner = new Hammer.Pan({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 0 });
+    manager.add(panner);
+    manager.on("panleft", function(e) {
+        elem.style.transform = "translateX(" + (e.distance * -1) + "px)";
+    });
+    manager.on("panright", function(e) {
+        elem.style.transform = "translateX(" + e.distance + "px)";
+    });
+
+
     $(".menu-overlay, .fab-menu li>a").click(function(){
       TweenLite.to(".fab-menu", 0.3, {right: "-400px"});
       TweenLite.to(".menu-overlay", 0.4, {opacity: 0, ease: Power4.easeIn, onComplete: 
@@ -81,7 +107,7 @@ window.onload = function(){
     })
 
     // Navigation
-
+    //bugado, arrumar
     $(".menu-navigation").click(function(event){
       var offset= $("#section-"+$(this).parent().attr("id")).offset().top;
       TweenLite.to(window, 1, {scrollTo:{y: {offset}}, ease: Power4.easeOut });
@@ -124,20 +150,6 @@ window.onload = function(){
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
   })      
-
-
-  $('div.bgParallax').each(function(){
-	var $obj = $(this);
- 
-	$(window).scroll(function() {
-		var yPos = -($(window).scrollTop() / $obj.data('speed')); 
- 
-		var bgpos = '50% '+ yPos + 'px';
- 
-		$obj.css('background-position', bgpos );
- 
-	}); 
-});
 
 
 
