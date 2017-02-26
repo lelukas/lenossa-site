@@ -254,14 +254,7 @@ form>div.column:last-child> *{
     border-radius: 50%;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-.fab>img{
-    width: 2em;
-}
-
-.fab svg{
-    display: block;
-    margin: auto;
-    height: auto;
+.fab img{
     width: 2em;
 }
 

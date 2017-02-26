@@ -23,10 +23,10 @@ window.onload = function(){
     setMapsDimensions();
     $(window).resize(function (){
  
-      // setTimeout(function() {
+      setTimeout(function() {
               setMapsDimensions();
               setBackgrounds();
-      // }, 400);
+      }, 1000);
     })
 
     var tl = new TimelineLite();
