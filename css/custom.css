@@ -22,12 +22,10 @@ section:nth-child(odd){
 }
 
 section:nth-child(odd) .background-title{
-    background-color: #d6d6d6;
+    background-color: #e8e8e8;
 }
 
 .background-title{
-    height: 4em;
-    width: 100%;
     position: absolute;
 }
 
@@ -138,7 +136,7 @@ div.img{
 
 h2{
     text-align: center;
-    font-family: 'Exo', sans-serif;
+    font-family: 'aganeextra_bold';
     font-size: 2.3em;
     text-transform: uppercase;
     position: relative;
@@ -378,7 +376,7 @@ footer>div:last-child>div{
     }
 
     form+.column{
-        margin-top: 1em;
+        
         padding-left: 0;
     }
     
@@ -396,7 +394,7 @@ footer>div:last-child>div{
     }
 
     form+.column{
-        margin-top: 1em;
+        margin-top: 5em;
         padding-left: 0;
     }
 }

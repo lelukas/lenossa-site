@@ -1,33 +1,36 @@
 window.onload = function(){
 
-  // var elem = new Foundation.Magellan(element, options);
+  // var elem = new Foundation.Magellan($(".menu"), {data-animation-easing: "swing"}
 
+  // );
+  var timer;
+  var screenWidth = $(window).width();
+
+  setBackgrounds();  
+  setMapsDimensions();
   // media query change
-    if (matchMedia) {
-      var mq = window.matchMedia("(min-width: 64em)");
-      mq.addListener(WidthChange);
-      WidthChange(mq);
-    }
+  if (matchMedia) var mq = window.matchMedia("(min-width: 64em)");
+      // mq.addListener(WidthChange);
+      // WidthChange(mq);
     
-    function WidthChange(mq) {
-      if (!mq.matches) {
-        $(".images>div").unbind();
-      } else {
+    
+  //   function WidthChange(mq) {
+  //     if (!mq.matches) {
+  //       $(".images>div").unbind();
+  //     } else {
         
-      }
-    }
+  //     }
+  //   }
 
 
-    var screenWidth = $(window).width();
-    setBackgrounds();  
-    setMapsDimensions();
-    $(window).resize(function (){
- 
-      setTimeout(function() {
-              setMapsDimensions();
-              setBackgrounds();
-      }, 1000);
-    })
+
+    window.addEventListener("resize", function (e){
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(function(){
+        setMapsDimensions();
+        setBackgrounds();
+      }, 500);  
+    }, false)
 
     var tl = new TimelineLite();
     var shrinkBar = TweenLite.to(".top-bar:first-child", 0.2, {height: "4em"})
@@ -89,7 +92,7 @@ window.onload = function(){
     })
 
 
-    // SLIDING HTMLMenuElement. CONTNUAR DEPOIS. //TODO DEMAIS
+    // SLIDING HTMLMenuElement. CONTNUAR DEPOIS. //TO DO DEMAIS
 
     // var sideMenu = $("#side-menu");
     // var menuPuller = document.getElementById("menu-puller");
@@ -135,19 +138,25 @@ window.onload = function(){
     function setBackgrounds(){
         $(".background-title").each(function (){
           var title = $(this).prev().children()
-          $(this).css("height", title.height() + 20 + "px")
-          $(this).position({
-            my: "center",
-            at: "center",
-            of: title
+          $(this).css({
+            height:  title.height() + 20 + "px",
+            top: title.offset().top - 10 + "px",
+            left: 0
           })
+          // $(this).position({
+          //   my: "center",
+          //   at: "center",
+          //   of: title
+          // })
       })
+      console.log("mudou");
+      // $(".background-title").css("left", 0);
     }
     
 
     function ScrollFactory(background, section){
       this.controller = new ScrollMagic.Controller();
-      this.tween = TweenLite.from(background, 0.7, {left: -screenWidth, ease: Power4.easeInOut});
+      this.tween = TweenLite.to(background, 0.7, {width: "100%", ease: Power4.easeInOut});
 
       this.scene = new ScrollMagic.Scene({
         triggerElement: section
