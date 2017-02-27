@@ -5,11 +5,12 @@ window.onload = function(){
   // );
   var timer;
   var screenWidth = $(window).width();
+  var mq = window.matchMedia("(min-width: 64em)");
 
   setBackgrounds();  
   setMapsDimensions();
   // media query change
-  if (matchMedia) var mq = window.matchMedia("(min-width: 64em)");
+  // if (matchMedia) 
       // mq.addListener(WidthChange);
       // WidthChange(mq);
     

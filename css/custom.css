@@ -38,7 +38,7 @@ section:nth-child(odd) .background-title{
 }
 /*---------------------------------------------------------*/
 
-
+svg{width: 15em;}
 /*Top Bar*/
 
 @keyframes in{
